@@ -1,17 +1,12 @@
 package com.demo.Java.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
+import lombok.*;
 import javax.persistence.*;
 import java.io.Serializable;
-
 @Data
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "Prueba")
+@NoArgsConstructor
 public class Prueba implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -25,6 +20,10 @@ public class Prueba implements Serializable {
 
     @Column(name = "apellido")
     private String apellido;
+
+
+    public Prueba(int i, String francisco, String granados) {
+    }
 
     public Prueba(String nombre, String apellido) {
     }

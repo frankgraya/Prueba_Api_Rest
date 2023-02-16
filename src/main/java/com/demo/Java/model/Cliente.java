@@ -2,22 +2,24 @@ package com.demo.Java.model;
 
 import lombok.*;
 import org.hibernate.Hibernate;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
-@Getter
-@Setter
-@ToString
- @Entity
+
+
+/**
+ *@Table(name = "Cliente", uniqueConstraints = {@UniqueConstraint(columnNames = {"nombre"})})
+ * Es una regla que funciona para que  el titulo sea unico y nos e mande por el Json
+ */
+
+@Data
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Estudiante")
-public class Persona implements Serializable {
-
+@Table(name = "Cliente", uniqueConstraints = {@UniqueConstraint(columnNames = {"nombre"})})
+public class Cliente implements Serializable {
     private static final long serialVersionUID = 1L;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -25,17 +27,21 @@ public class Persona implements Serializable {
     private String nombre;
     @Column(name = "apellido")
     private String apellido;
+    @Column(name = "createAt")
+    private String createAt;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        Persona persona = (Persona) o;
-        return id != null && Objects.equals(id, persona.id);
+        Cliente cliente = (Cliente) o;
+        return id != null && Objects.equals(id, cliente.id);
     }
 
     @Override
     public int hashCode() {
         return getClass().hashCode();
     }
+
+
 }
