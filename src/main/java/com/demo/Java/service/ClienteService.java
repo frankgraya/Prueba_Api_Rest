@@ -13,4 +13,8 @@ public interface ClienteService {
     public Cliente FindByIdCliente(long id);
 
     public List<Cliente> findAllClientes();
+
+    public List<Cliente> findByapellido();
+
+    public void hola();
 }

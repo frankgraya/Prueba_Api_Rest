@@ -4,7 +4,7 @@ import com.demo.Java.model.Persona;
 
 import java.util.List;
 
-public interface PersonaService {
+public interface PersonaRespaldoService {
 
     public Persona savePersona(Persona persona);
 
@@ -13,5 +13,7 @@ public interface PersonaService {
     public Persona findById(long id);
 
     public List<Persona> findAll();
-    public void findTopByOrderByIdDesc();
+
+    public void hola();
+
 }

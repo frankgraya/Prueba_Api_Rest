@@ -1,12 +1,10 @@
 package com.demo.Java.service;
 
-
 import com.demo.Java.model.Persona;
 import com.demo.Java.repository.PersonaRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -16,6 +14,7 @@ public class PersonaServiceImpl implements PersonaService {
 
     @Autowired
     private PersonaRepository personaRepository;
+
     @Override
     public Persona savePersona(Persona persona) {
         log.info("Se guardo savePersona con exito ");
@@ -45,5 +44,9 @@ public class PersonaServiceImpl implements PersonaService {
         return personaRepository.findAll();
     }
 
-
+    @Override
+    public void findTopByOrderByIdDesc() {
+        personaRepository.findTopByOrderByIdDesc();
+        log.info("Se busco con exito {persona}");
+    }
 }

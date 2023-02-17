@@ -17,7 +17,7 @@ import java.util.Objects;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Cliente", uniqueConstraints = {@UniqueConstraint(columnNames = {"nombre"})})
+@Table(name = "clientes", uniqueConstraints = {@UniqueConstraint(columnNames = {"nombre"})})
 public class Cliente implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
@@ -27,7 +27,9 @@ public class Cliente implements Serializable {
     private String nombre;
     @Column(name = "apellido")
     private String apellido;
-    @Column(name = "createAt")
+    @Column(name = "email")
+    private String email;
+    @Column(name = "create_At")
     private String createAt;
 
     @Override

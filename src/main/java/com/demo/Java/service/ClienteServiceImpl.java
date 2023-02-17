@@ -52,4 +52,14 @@ public class ClienteServiceImpl implements ClienteService {
         log.info("Se encontro todos los clientes con exito");
         return clienteRepository.findAll();
     }
+
+    @Override
+    public List<Cliente> findByapellido() {
+        return clienteRepository.findByapellido("rodriguez");
+    }
+
+    @Override
+    public void hola() {
+        System.out.println("hola mundo");
+    }
 }

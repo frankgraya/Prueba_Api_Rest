@@ -10,10 +10,10 @@ import java.util.Objects;
 @Getter
 @Setter
 @ToString
- @Entity
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Estudiante")
+@Table(name = "persona")
 public class Persona implements Serializable {
 
     private static final long serialVersionUID = 1L;
