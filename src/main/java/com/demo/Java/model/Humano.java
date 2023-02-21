@@ -1,13 +1,16 @@
 package com.demo.Java.model;
+
 import lombok.*;
+
 import javax.persistence.*;
+
 @Getter
 @Setter
 @ToString
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "person")
+@Table(name = "humanos")
 public class Humano {
     private static final long serialVersionUID = 1L;
 
@@ -18,6 +21,8 @@ public class Humano {
     String position;
     String fullname;
     String image;
+    String user;
+    String password;
 
 
 }

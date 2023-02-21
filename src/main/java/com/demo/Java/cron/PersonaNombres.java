@@ -1,10 +1,7 @@
 package com.demo.Java.cron;
 
-import com.demo.Java.model.Cliente;
-import com.demo.Java.model.Persona;
-import com.demo.Java.repository.PersonaRepository;
-import com.demo.Java.service.ClienteService;
-import com.demo.Java.service.PersonaService;
+import com.demo.Java.model.Humano;
+import com.demo.Java.service.HumanoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -14,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class PersonaNombres {
     @Autowired
-    private ClienteService clienteService;
+    private HumanoService humanoService;
 
     @Scheduled(cron = "* * * * * *")
     public void scheduleTaskUsingCronExpression() {
@@ -24,14 +21,13 @@ public class PersonaNombres {
     }
 
     public void personaSave() {
-        Cliente cliente = new Cliente();
-        cliente.setNombre("lizbet");
-        cliente.setApellido("peres");
-        cliente.setEmail("corre@gmail.com");
-        cliente.setCreateAt("2019-28-22");
-        clienteService.saveCliente(cliente);
-        //clienteService.findTopByOrderByIdDesc();
-        log.info("El ultimo es" );
+        Humano humano = new Humano();
+        humano.setFullname("lizbet");
+        humano.setFullname("peres");
+        humano.setUser("corre@gmail.com");
+        humanoService.crearHumano(humano);
+        //humanoService.findTopByOrderByIdDesc();
+        log.info("El ultimo es");
     }
 
 //https://crontab.cronhub.io/
