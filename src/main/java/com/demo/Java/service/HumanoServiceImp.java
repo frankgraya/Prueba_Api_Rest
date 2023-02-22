@@ -46,7 +46,20 @@ public class HumanoServiceImp implements HumanoService {
     }
 
     @Override
-    public Humano login(String user, String password) {
-        return humanoRepository.findByUserAndPassword(user, password);
+    public HumanoDTO login(String user, String password) {
+        Humano humano = humanoRepository.findByUserAndPassword(user, password);
+        HumanoDTO humanoDTO = new HumanoDTO(
+                humano.getId(),
+                humano.getUbication(),
+                humano.getPosition(),
+                humano.getFullname(),
+                humano.getImage()
+        );
+        return humanoDTO;
+    }
+
+    @Override
+    public void hola() {
+        System.out.println("HOLA MUNDO");
     }
 }

@@ -16,11 +16,11 @@ public class PersonaNombres {
     @Scheduled(cron = "* * * * * *")
     public void scheduleTaskUsingCronExpression() {
         long now = System.currentTimeMillis() / 1000;
-        personaSave();
+    //    personaSave();
         log.info("esto es un cron" + now);
     }
 
-    public void personaSave() {
+   /* public void personaSave() {
         Humano humano = new Humano();
         humano.setFullname("lizbet");
         humano.setFullname("peres");
@@ -29,6 +29,6 @@ public class PersonaNombres {
         //humanoService.findTopByOrderByIdDesc();
         log.info("El ultimo es");
     }
-
+*/
 //https://crontab.cronhub.io/
 }

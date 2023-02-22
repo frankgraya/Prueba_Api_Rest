@@ -1,7 +1,6 @@
 package com.demo.Java.service;
 
 import com.demo.Java.model.Humano;
-
 import java.util.List;
 
 public interface HumanoService {
@@ -15,6 +14,8 @@ public interface HumanoService {
 
     public void ModificarHumano(Humano humano);
 
-    public Humano login(String user, String password);
+    public HumanoDTO login(String user, String password);
+
+    public void hola();
 
 }

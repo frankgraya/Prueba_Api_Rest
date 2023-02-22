@@ -3,26 +3,23 @@ package com.demo.Java.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
-@Getter
-@Setter
-@ToString
+@Data
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
-@Table(name = "humanos")
+@Table(name = "humano")
 public class Humano {
-    private static final long serialVersionUID = 1L;
-
     @Id
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    String ubication;
-    String position;
-    String fullname;
-    String image;
-    String user;
-    String password;
+    private long id;
+    @Basic
+    private String ubication;
+    private String position;
+    private String fullname;
+    private String image;
+    private String user;
+    private String password;
 
 
 }

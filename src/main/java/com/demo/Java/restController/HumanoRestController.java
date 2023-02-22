@@ -1,6 +1,7 @@
 package com.demo.Java.restController;
 
 import com.demo.Java.model.Humano;
+import com.demo.Java.service.HumanoDTO;
 import com.demo.Java.service.HumanoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,7 +53,7 @@ public class HumanoRestController {
     }
 
     @PostMapping("/login")
-    public Humano login(@RequestBody Humano humano) {
+    public HumanoDTO login(@RequestBody Humano humano) {
         return humanoService.login(humano.getPassword(), humano.getUser());
     }
 
