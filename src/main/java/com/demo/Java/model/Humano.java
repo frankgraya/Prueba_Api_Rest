@@ -18,7 +18,7 @@ public class Humano {
     private String position;
     private String fullname;
     private String image;
-    private String user;
+    private String usuario;
     private String password;
 
 

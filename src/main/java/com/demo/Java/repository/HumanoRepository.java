@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 //Uso de query methods
 @Repository
 public interface HumanoRepository extends JpaRepository<Humano, Long> {
-    public Humano findByUserAndPassword(String user, String password);
+    public Humano findByUsuarioAndPassword(String usuario, String password);
 }

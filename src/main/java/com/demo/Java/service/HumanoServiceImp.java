@@ -1,6 +1,7 @@
 package com.demo.Java.service;
 
 import com.demo.Java.model.Humano;
+import com.demo.Java.model.HumanoDTO;
 import com.demo.Java.repository.HumanoRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,8 +47,8 @@ public class HumanoServiceImp implements HumanoService {
     }
 
     @Override
-    public HumanoDTO login(String user, String password) {
-        Humano humano = humanoRepository.findByUserAndPassword(user, password);
+    public HumanoDTO login(String usuario, String password) {
+        Humano humano = humanoRepository.findByUsuarioAndPassword(usuario, password);
         HumanoDTO humanoDTO = new HumanoDTO(
                 humano.getId(),
                 humano.getUbication(),
@@ -56,10 +57,5 @@ public class HumanoServiceImp implements HumanoService {
                 humano.getImage()
         );
         return humanoDTO;
-    }
-
-    @Override
-    public void hola() {
-        System.out.println("HOLA MUNDO");
     }
 }

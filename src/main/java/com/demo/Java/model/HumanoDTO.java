@@ -1,4 +1,4 @@
-package com.demo.Java.service;
+package com.demo.Java.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,8 +11,6 @@ import java.io.Serializable;
 /**
  *LOS DTOS
  * SIRVEN PARA MOSTRAR DATOS DE SOLO LO QUE QUEREMOS SIN ESPECIFICAR
- *
- *
  */
 @Data
 @AllArgsConstructor
