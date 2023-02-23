@@ -1,7 +1,6 @@
-package com.demo.Java.cron;
+package com.demo.java.cron;
 
-import com.demo.Java.model.Humano;
-import com.demo.Java.service.HumanoService;
+import com.demo.java.service.HumanoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;

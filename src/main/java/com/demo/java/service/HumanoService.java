@@ -1,7 +1,7 @@
-package com.demo.Java.service;
+package com.demo.java.service;
 
-import com.demo.Java.model.Humano;
-import com.demo.Java.model.HumanoDTO;
+import com.demo.java.model.Humano;
+import com.demo.java.model.HumanoDTO;
 
 import java.util.List;
 

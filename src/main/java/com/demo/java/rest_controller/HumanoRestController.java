@@ -1,8 +1,8 @@
-package com.demo.Java.restController;
+package com.demo.java.rest_controller;
 
-import com.demo.Java.model.Humano;
-import com.demo.Java.model.HumanoDTO;
-import com.demo.Java.service.HumanoService;
+import com.demo.java.model.Humano;
+import com.demo.java.model.HumanoDTO;
+import com.demo.java.service.HumanoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -1,9 +1,7 @@
-package com.demo.Java.model;
+package com.demo.java.model;
 
 import lombok.*;
-
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Data
 @Entity

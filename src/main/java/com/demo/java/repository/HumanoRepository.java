@@ -1,6 +1,6 @@
-package com.demo.Java.repository;
+package com.demo.java.repository;
 
-import com.demo.Java.model.Humano;
+import com.demo.java.model.Humano;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

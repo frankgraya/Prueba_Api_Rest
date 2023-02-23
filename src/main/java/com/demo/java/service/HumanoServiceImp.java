@@ -1,8 +1,8 @@
-package com.demo.Java.service;
+package com.demo.java.service;
 
-import com.demo.Java.model.Humano;
-import com.demo.Java.model.HumanoDTO;
-import com.demo.Java.repository.HumanoRepository;
+import com.demo.java.model.Humano;
+import com.demo.java.model.HumanoDTO;
+import com.demo.java.repository.HumanoRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
