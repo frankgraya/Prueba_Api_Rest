@@ -16,7 +16,7 @@ public class PersonaNombres {
     public void scheduleTaskUsingCronExpression() {
         long now = System.currentTimeMillis() / 1000;
     //    personaSave();
-        log.info("esto es un cron" + now);
+        log.info("Cron Trabajando" + now);
     }
 
    /* public void personaSave() {

@@ -1,9 +1,22 @@
 package com.demo.java.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.io.Serializable;
 
+
 public class PersonaDTO implements Serializable {
-    private Long id;
+
+    private static final long serialVersionUID = 1L;
+
+    private long id;
     private String nombre;
     private int edad;
     private String direccion;
@@ -13,9 +26,14 @@ public class PersonaDTO implements Serializable {
     public PersonaDTO() {
     }
 
-
-    public PersonaDTO(Long id, String nombre, int edad, String direccion, long telefono, long codigoPostal) {
+    public PersonaDTO(long id, String nombre, int edad) {
         this.id = id;
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    public PersonaDTO( String nombre, int edad, String direccion, long telefono, long codigoPostal) {
+
         this.nombre = nombre;
         this.edad = edad;
         this.direccion = direccion;
@@ -23,17 +41,11 @@ public class PersonaDTO implements Serializable {
         this.codigoPostal = codigoPostal;
     }
 
-    public PersonaDTO(Long id, String nombre, int edad) {
-        this.id = id;
-        this.nombre = nombre;
-        this.edad = edad;
-    }
-
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -43,5 +55,37 @@ public class PersonaDTO implements Serializable {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public long getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(long telefono) {
+        this.telefono = telefono;
+    }
+
+    public long getCodigoPostal() {
+        return codigoPostal;
+    }
+
+    public void setCodigoPostal(long codigoPostal) {
+        this.codigoPostal = codigoPostal;
     }
 }

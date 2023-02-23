@@ -17,7 +17,7 @@ public class Persona {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
     @Column(name = "nombre", nullable = false)
     private String nombre;
     @Column(name = "edad", nullable = true)
@@ -28,6 +28,7 @@ public class Persona {
     private long telefono;
     @Column(name = "codigoPostal", nullable = true)
     private long codigoPostal;
+
 
 }
 

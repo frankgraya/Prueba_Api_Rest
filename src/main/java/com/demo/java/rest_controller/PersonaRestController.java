@@ -17,13 +17,15 @@ public class PersonaRestController {
     @Autowired
     private PersonaService personaService;
 
-
     //Create
     @PostMapping("/persona")
     @ResponseBody
     public Persona crearPersona(@RequestBody PersonaDTO personaDTO) {
         Persona persona = new Persona();
         persona.setNombre(personaDTO.getNombre());
+        persona.setDireccion(personaDTO.getDireccion());
+        persona.setEdad(personaDTO.getEdad());
+        persona.setCodigoPostal(personaDTO.getCodigoPostal());
         return personaService.crearPersona(persona);
     }
 
@@ -35,8 +37,23 @@ public class PersonaRestController {
         return personaService.listarPersonas();
     }
 
-    @PostMapping("/banco")
-    public PersonaDTO vdrDTO(@RequestBody PersonaDTO personaDTO) {
+    //update
+    @PutMapping("/persona")
+    public void modificarPersona(@RequestBody Persona persona) {
+        log.info("Se modificarPersona Controller con exito ");
+        personaService.modificarPersona(persona);
+    }
+
+    //Delete
+    @DeleteMapping("/persona/{id}")
+    public void borrarPersona(@PathVariable long id) {
+        log.info("Se borrarHumano Controller con exito");
+        personaService.borrarPersona(id);
+    }
+
+    //DTO
+    @PostMapping("/personadto")
+    public PersonaDTO verDTO(@RequestBody PersonaDTO personaDTO) {
         log.info("Se PersonaDTO Controller con exito ");
         return personaService.verPersona(personaDTO.getNombre());
     }

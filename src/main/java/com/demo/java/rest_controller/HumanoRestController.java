@@ -40,7 +40,7 @@ public class HumanoRestController {
 
     //Delete
     @DeleteMapping("/humano/{id}")
-    public void borrarHumano(@PathVariable Long id) {
+    public void borrarHumano(@PathVariable long id) {
         log.info("Se borrarHumano Controller con exito ");
         humanoService.borrarHumano(id);
     }
