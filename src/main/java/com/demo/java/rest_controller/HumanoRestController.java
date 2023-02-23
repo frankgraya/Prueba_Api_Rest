@@ -35,7 +35,7 @@ public class HumanoRestController {
     @PutMapping("/humano")
     public void modificarHumano(@RequestBody Humano humano) {
         log.info("Se ModificarHumano Controller con exito ");
-        humanoService.ModificarHumano(humano);
+        humanoService.modificarHumano(humano);
     }
 
     //Delete

@@ -10,6 +10,6 @@ public interface HumanoService {
     public void borrarHumano(long id);
     public List<Humano> listarHumanos();
     public Humano buscarHumanoPorID(long id);
-    public void ModificarHumano(Humano humano);
+    public void modificarHumano(Humano humano);
     public HumanoDTO login(String usuario, String password);
 }

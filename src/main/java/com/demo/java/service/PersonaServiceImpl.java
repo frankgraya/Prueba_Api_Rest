@@ -58,12 +58,14 @@ public class PersonaServiceImpl implements PersonaService {
     @Override
     public PersonaDTO verPersona(String nombre) {
         Persona persona = personaRepository.findBynombre(nombre);
-        PersonaDTO personaDTO = new PersonaDTO(
+        if (persona == null) {
+            return null; // O lanzar una excepción u otro manejo de error adecuado
+        }
+        return new PersonaDTO(
                 persona.getId(),
                 persona.getNombre(),
                 persona.getEdad()
         );
-        return personaDTO;
     }
 
 

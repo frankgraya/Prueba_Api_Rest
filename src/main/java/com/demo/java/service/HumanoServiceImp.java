@@ -39,9 +39,8 @@ public class HumanoServiceImp implements HumanoService {
         log.info("Se buscarHumanoPorID con exito ");
         return humanoRepository.findById(id).orElse(null);
     }
-
     @Override
-    public void ModificarHumano(Humano humano) {
+    public void modificarHumano(Humano humano) {
         log.info("Se ModificarHumano con exito ");
         humanoRepository.save(humano);
     }
@@ -49,13 +48,15 @@ public class HumanoServiceImp implements HumanoService {
     @Override
     public HumanoDTO login(String usuario, String password) {
         Humano humano = humanoRepository.findByUsuarioAndPassword(usuario, password);
-        HumanoDTO humanoDTO = new HumanoDTO(
+        if (humano == null) {
+            return null; // O lanzar una excepción u otro manejo de error adecuado
+        }
+        return new HumanoDTO(
                 humano.getId(),
                 humano.getUbication(),
                 humano.getPosition(),
                 humano.getFullname(),
                 humano.getImage()
         );
-        return humanoDTO;
     }
 }
