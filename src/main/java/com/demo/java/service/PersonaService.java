@@ -15,7 +15,7 @@ public interface PersonaService {
 
     Persona buscarPersonaPorID(long id);
 
-    void modificarPersona(Persona persona);
+    void modificarPersona(PersonaDTO personaDTO);
 
     PersonaDTO verPersona(String nombre);
 }

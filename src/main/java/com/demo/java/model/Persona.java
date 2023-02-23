@@ -30,6 +30,8 @@ public class Persona {
     private long codigoPostal;
 
 
+    public Persona(String nombre, int edad, long telefono, String direccion, long codigoPostal) {
+    }
 }
 
 

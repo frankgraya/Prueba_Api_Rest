@@ -39,9 +39,9 @@ public class PersonaRestController {
 
     //update
     @PutMapping("/persona")
-    public void modificarPersona(@RequestBody Persona persona) {
+    public void modificarPersona(@RequestBody PersonaDTO personaDTO) {
         log.info("Se modificarPersona Controller con exito ");
-        personaService.modificarPersona(persona);
+        personaService.modificarPersona(personaDTO);
     }
 
     //Delete

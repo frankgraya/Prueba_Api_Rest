@@ -43,10 +43,17 @@ public class PersonaServiceImpl implements PersonaService {
     }
 
     @Override
-    public void modificarPersona(Persona persona) {
-        log.info("Se ModificarHumano con exito ");
+    public void modificarPersona(PersonaDTO personaDTO) {
+        Persona persona = new Persona(
+                personaDTO.getNombre(),
+                personaDTO.getEdad(),
+                personaDTO.getTelefono(),
+                personaDTO.getDireccion(),
+                personaDTO.getCodigoPostal()
+        );
         personaRepository.save(persona);
     }
+
 
     @Override
     public PersonaDTO verPersona(String nombre) {
