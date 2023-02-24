@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 
 /**
- *LOS DTOS
+ * LOS DTOS
  * SIRVEN PARA MOSTRAR DATOS DE SOLO LO QUE QUEREMOS SIN ESPECIFICAR
  */
 @Data
